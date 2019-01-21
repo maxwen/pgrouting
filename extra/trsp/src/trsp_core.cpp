@@ -57,6 +57,7 @@ int trsp_edge_wrapper(
     char **err_msg
     )
 {
+	std::cerr << "trsp_edge_wrapper" << std::endl;
 
     int i, j;
 	ruleTable.clear();
@@ -71,6 +72,7 @@ int trsp_edge_wrapper(
 		ruleTable.push_back(make_pair(restricts[i].to_cost, seq));
 	}
 
+	std::cerr << "my_dijkstra" << std::endl;
 	GraphDefinition gdef;
 	int res = gdef.my_dijkstra(edges, edge_count, start_edge, start_pos, end_edge, end_pos, path, path_count, err_msg, ruleTable);
 

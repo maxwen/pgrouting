@@ -21,6 +21,7 @@ IF(NOT POSTGRESQL_FOUND)
   MESSAGE(FATAL ERROR " Please check your PostgreSQL installation.") 
 ENDIF(NOT POSTGRESQL_FOUND)
 
+SET(BOOST_ROOT "/opt/boost_1_50_0/")
 FIND_PACKAGE(Boost)
 IF(Boost_INCLUDE_DIRS)
   MESSAGE("Boost headers were found here: ${Boost_INCLUDE_DIR}")
